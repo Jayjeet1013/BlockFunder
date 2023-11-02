@@ -5,3 +5,12 @@ import {ChainId,ThirdwebProvider} from '@thirdweb-dev/react'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+root.render(
+        <ThirdwebProvider desiredChainId={ChainId.Goerli}> 
+          <Router>
+            <StateContextProvider>
+              <App />
+            </StateContextProvider>
+          </Router>
+        </ThirdwebProvider> 
+      )
